@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Full-height hero image */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-128 sm:h-screen w-full overflow-hidden">
         <Image
           src="/assets/hero2.jpg"
           alt="Bimaah International consultation"
