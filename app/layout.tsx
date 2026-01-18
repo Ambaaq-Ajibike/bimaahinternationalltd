@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   description: "Expert immigration advice, benefits support, and legal document assistance. Founded by qualified immigration adviser Olabisi Adebayo. Empowering lives through clarity, compassion, and advocacy.",
   keywords: ["immigration advice", "immigration consultant", "visa application", "benefits support", "legal consulting", "immigration adviser UK", "Olabisi Adebayo", "vulnerable communities support", "legal documents"],
   authors: [{ name: "Bimaah International Ltd" }],
+  icons: {
+    icon: [
+      { url: '/assets/bimahlogo.png', type: 'image/png' },
+    ],
+    apple: '/assets/bimahlogo.png',
+  },
   openGraph: {
     title: "Bimaah International Ltd - Immigration, Benefits & Legal Consulting",
     description: "Expert immigration advice, benefits support, and legal document assistance. Your Rights. Your Voice. Our Support.",

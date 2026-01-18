@@ -9,14 +9,8 @@ export default function Header() {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const services = [
-    { name: 'Spouse visa', href: '/services#immigration' },
-    { name: 'Fiance visa', href: '/services#immigration' },
-    { name: 'Family visa', href: '/services#immigration' },
-    { name: 'Leave outside the rules', href: '/services#immigration' },
-    { name: 'Indefinite leave to remain', href: '/services#immigration' },
-    { name: 'Skilled work visas', href: '/services#immigration' },
-    { name: 'British naturalisation', href: '/services#immigration' },
-    { name: 'Appeals', href: '/services#immigration' },
+    { name: 'Immigration Advice', href: '/services' },
+    { name: 'Benefits and Welfare Support', href: '/services' },
   ];
 
   return (
@@ -33,7 +27,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <Link href="/about" className="text-[#718A9D] hover:text-[#1A7EB9] transition font-medium">
-              About
+              About Us
             </Link>
             <div className="relative group">
               <button 

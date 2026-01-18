@@ -180,7 +180,7 @@ export async function POST(request: NextRequest) {
       clientEmail.textContent = clientTextContent;
       clientEmail.sender = { 
         name: "Bimaah International", 
-        email: "ajibikeabdulqayyum04@gmail.com" 
+        email: "info@bimaahinternationalltd.com" 
       };
       clientEmail.to = [
         { 
@@ -203,7 +203,7 @@ export async function POST(request: NextRequest) {
       adminEmail.htmlContent = adminEmailContent;
       adminEmail.textContent = adminTextContent;
       adminEmail.sender = { 
-        email: "bimaahltd@gmail.com",
+        email: "info@bimaahinternationalltd.com",
         name: "Bimaah International"
       };
       adminEmail.to = [

@@ -49,7 +49,7 @@ export default function About() {
               </p>
 
               <div className="pt-4 space-y-2 text-base sm:text-lg font-semibold text-[#1A7EB9]">
-                <p>We don't just offer services.</p>
+                <p className="text-[#1C478A]">We <span className="text-[#1A7EB9]">don&apos;t just offer services.</span></p>
                 <p className="text-[#1C478A]">We <span className="text-[#1A7EB9]">build trust.</span></p>
                 <p className="text-[#1C478A]">We <span className="text-[#1A7EB9]">uplift voices.</span></p>
                 <p className="text-[#1C478A]">We <span className="text-[#1A7EB9]">walk beside you</span> throughout your journey.</p>

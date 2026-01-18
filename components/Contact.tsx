@@ -198,7 +198,8 @@ export default function Contact() {
             </div>
             <h3 className="font-semibold text-[#1C478A] mb-2">Email Us</h3>
             <p className="text-[#718A9D]">
-              <a href="mailto:bimaahltd@gmail.com" className="text-[#1A7EB9] font-semibold">bimaahltd@gmail.com</a>
+              <a href="mailto:bimaahltd@gmail.com" className="text-[#1A7EB9] font-semibold block">bimaahltd@gmail.com</a>
+              <a href="mailto:info@bimaahinternationalltd.com" className="text-[#1A7EB9] font-semibold block mt-1">info@bimaahinternationalltd.com</a>
             </p>
             <p className="text-sm text-[#718A9D] mt-2">We aim to reply within 24 hours</p>
           </div>

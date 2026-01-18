@@ -41,12 +41,12 @@ export default function Hero() {
           </div>
 
           {/* Hero Image */}
-          <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
+          <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
             <Image
               src="/assets/hero-image.png"
               alt="Professional consultation - diverse team in meeting"
               fill
-              className="object-cover"
+              className="object-cover object-center"
               priority
             />
           </div>

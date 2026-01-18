@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 export default function Footer() {
@@ -65,18 +67,20 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Bimaah International Ltd. All rights reserved.
           </p>
           <p className="text-white font-semibold text-base max-w-3xl mx-auto leading-relaxed">
-            Authorised and regulated by the Immigration Advice Authority in accordance with the{' '}
-            <a 
-              href="https://www.gov.uk/government/organisations/immigration-advice-authority" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="underline hover:text-[#97C5D9] transition-colors duration-300"
-            >
-              Adviser Code of Conduct
-            </a>
+            Authorised and regulated by the Immigration Advice Authority.
           </p>
           <p className="text-[#97C5D9] text-sm pt-2">
             Registration Number: N202537994
+          </p>
+          <p className="text-sm pt-4">
+            <a 
+              href="/PrivacyPolicy.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#97C5D9] underline hover:text-white transition-colors duration-300"
+            >
+              Privacy Policy
+            </a>
           </p>
         </div>
       </div>
