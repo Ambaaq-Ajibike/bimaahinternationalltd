@@ -128,8 +128,8 @@ export async function POST(request: NextRequest) {
         <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
           <h4 style="color: #1C478A; margin-top: 0;">Contact Information</h4>
           <p style="margin: 5px 0; color: #666;">
-            <strong>Phone:</strong> <a href="tel:+447903263491" style="color: #1A7EB9; text-decoration: none;">+44 7903 263491</a><br>
-            <strong>Email:</strong> <a href="mailto:bimaahltd@gmail.com" style="color: #1A7EB9; text-decoration: none;">bimaahltd@gmail.com</a><br>
+            <strong>Phone:</strong> <a href="tel:+447903263491" style="color: #1A7EB9; text-decoration: none;">03334040491</a><br>
+            <strong>Email:</strong> <a href="mailto:info@bimaahinternationalltd.com" style="color: #1A7EB9; text-decoration: none;">info@bimaahinternationalltd.com</a><br>
             <strong>Address:</strong> Toronto road, Tilbury RM18 7RL
           </p>
         </div>
@@ -162,8 +162,8 @@ export async function POST(request: NextRequest) {
       3. We'll schedule a free consultation at your convenience
       
       Contact Information:
-      Phone: +44 7903 263491
-      Email: bimaahltd@gmail.com
+      Phone: 03334040491
+      Email: info@bimaahinternationalltd.com
       Address: Toronto road, Tilbury RM18 7RL
       
       Bimaah International Ltd
@@ -208,7 +208,7 @@ export async function POST(request: NextRequest) {
       };
       adminEmail.to = [
         {
-          email: "bimaahltd@gmail.com",
+          email: "info@bimaahinternationalltd.com",
           name: "Bimaah International"
         }
       ];

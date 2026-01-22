@@ -14,7 +14,31 @@ export default function Home() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/25 to-black/45" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" aria-hidden />
+        {/* Hero overlay content */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="px-6 sm:px-10 lg:px-16 max-w-6xl text-center">
+            <div className="inline-block rounded-xl px-6 py-6 sm:px-8 sm:py-8 shadow-lg">
+            <h1 className="text-white text-3xl sm:text-5xl font-bold leading-tight drop-shadow-xl mb-5">
+                Your Rights. Your Voice. Our Support.
+            </h1>
+            <div className="mt-12 flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href="/contact"
+                className="inline-block rounded-md bg-navy text-white px-6 py-3 text-center font-semibold hover:bg-[#16396d] transition-colors"
+              >
+                Book a Consultation
+              </Link>
+              <Link
+                href="/services"
+                className="inline-block rounded-md bg-white/90 text-[#1C478A] px-6 py-3 text-center font-semibold hover:bg-white transition-colors"
+              >
+                View Services
+              </Link>
+            </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Services */}
@@ -37,12 +61,12 @@ export default function Home() {
             <p>
               Call us now on{' '}
               <Link href="tel:+447903263491" className="text-[#1A7EB9] font-semibold hover:text-[#1B60A3]">
-                +44 7903 263491
+                03334040491
               </Link>
               {" "}
               or send us an e-mail at{' '}
-              <Link href="mailto:bimaahltd@gmail.com" className="text-[#1A7EB9] font-semibold hover:text-[#1B60A3]">
-                bimaahltd@gmail.com
+              <Link href="mailto:info@bimaahinternationalltd.com" className="text-[#1A7EB9] font-semibold hover:text-[#1B60A3]">
+                info@bimaahinternationalltd.com
               </Link>
             </p>
             

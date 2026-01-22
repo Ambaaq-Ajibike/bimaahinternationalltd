@@ -188,7 +188,7 @@ export default function Contact() {
             </div>
             <h3 className="font-semibold text-[#1C478A] mb-2">Call Us</h3>
             <p className="text-[#718A9D]">
-              <a href="tel:+447903263491" className="text-[#1A7EB9] font-semibold">+44 7903 263491</a>
+              <a href="tel:+447903263491" className="text-[#1A7EB9] font-semibold">03334040491</a>
             </p>
             <p className="text-sm text-[#718A9D] mt-2">Available Mon-Fri</p>
           </div>
@@ -198,14 +198,13 @@ export default function Contact() {
             </div>
             <h3 className="font-semibold text-[#1C478A] mb-2">Email Us</h3>
             <p className="text-[#718A9D]">
-              <a href="mailto:bimaahltd@gmail.com" className="text-[#1A7EB9] font-semibold block">bimaahltd@gmail.com</a>
-              <a href="mailto:info@bimaahinternationalltd.com" className="text-[#1A7EB9] font-semibold block mt-1">info@bimaahinternationalltd.com</a>
+              <a href="mailto:info@bimaahinternationalltd.com" className="text-[#1A7EB9] font-semibold block">info@bimaahinternationalltd.com</a>
             </p>
             <p className="text-sm text-[#718A9D] mt-2">We aim to reply within 24 hours</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow border-t-4 border-[#1A7EB9]">
             <div className="flex justify-center mb-3">
-              <MapPin className="w-10 h-10 text-[#1A7EB9]" />
+              <MapPin className="w-10 h-10 text-primary" />
             </div>
             <h3 className="font-semibold text-[#1C478A] mb-2">Visit Us</h3>
             <p className="text-[#718A9D]">Toronto road, Tilbury RM18 7RL</p>

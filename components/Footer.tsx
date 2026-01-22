@@ -73,10 +73,8 @@ export default function Footer() {
             Registration Number: N202537994
           </p>
           <p className="text-sm pt-4">
-            <a 
-              href="/PrivacyPolicy.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <a
+              href="/privacy"
               className="text-[#97C5D9] underline hover:text-white transition-colors duration-300"
             >
               Privacy Policy
