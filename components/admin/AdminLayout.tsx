@@ -10,16 +10,19 @@ import {
   QuestionMarkCircleIcon,
   ChatBubbleLeftRightIcon,
   Cog6ToothIcon,
-  ArrowRightOnRectangleIcon 
+  ArrowRightOnRectangleIcon,
+  UserGroupIcon,
+  ShieldCheckIcon
 } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Dashboard', href: '/admin/dashboard', icon: HomeIcon },
-  { name: 'Hero Section', href: '/admin/dashboard/hero', icon: DocumentTextIcon },
+  { name: 'Home', href: '/admin/dashboard/home', icon: HomeIcon },
+  { name: 'About Us', href: '/admin/dashboard/about', icon: UserGroupIcon },
   { name: 'Services', href: '/admin/dashboard/services', icon: Cog6ToothIcon },
-  { name: 'Contact Info', href: '/admin/dashboard/contact', icon: EnvelopeIcon },
-  { name: 'FAQs', href: '/admin/dashboard/faqs', icon: QuestionMarkCircleIcon },
   { name: 'Testimonials', href: '/admin/dashboard/testimonials', icon: ChatBubbleLeftRightIcon },
+  { name: 'FAQ', href: '/admin/dashboard/faqs', icon: QuestionMarkCircleIcon },
+  { name: 'Contact', href: '/admin/dashboard/contact', icon: EnvelopeIcon },
+  { name: 'Privacy', href: '/admin/dashboard/privacy', icon: ShieldCheckIcon },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {

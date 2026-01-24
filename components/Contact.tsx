@@ -9,6 +9,8 @@ interface ContactInfoProps {
     phone: string;
     email: string;
     address: string;
+    phoneAvailability?: string;
+    openingHours?: string;
   };
 }
 
@@ -198,7 +200,7 @@ export default function Contact({ contactInfo }: ContactInfoProps) {
             <p className="text-[#718A9D]">
               <a href={`tel:${contactInfo.phone}`} className="text-[#1A7EB9] font-semibold">{contactInfo.phone}</a>
             </p>
-            <p className="text-sm text-[#718A9D] mt-2">Available Mon-Fri</p>
+            <p className="text-sm text-[#718A9D] mt-2">{contactInfo.phoneAvailability || 'Available Mon-Fri'}</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow border-t-4 border-[#1A7EB9]">
             <div className="flex justify-center mb-3">
@@ -217,11 +219,12 @@ export default function Contact({ contactInfo }: ContactInfoProps) {
             <h3 className="font-semibold text-[#1C478A] mb-2">Visit Us</h3>
             <p className="text-[#718A9D]">{contactInfo.address}</p>
             <p className="text-sm text-[#718A9D] mt-2">By appointment</p>
-            <div className="mt-3 text-sm text-[#718A9D]">
-              <strong className="text-[#1C478A]">Opening hours:</strong>
-              <div>Mon-Sat: 10:00am - 6:00pm</div>
-              <div>Sun: 2:00pm - 6:00pm</div>
-            </div>
+            {contactInfo.openingHours && (
+              <div className="mt-3 text-sm text-[#718A9D]">
+                <strong className="text-[#1C478A]">Opening hours:</strong>
+                <div className="whitespace-pre-line">{contactInfo.openingHours}</div>
+              </div>
+            )}
           </div>
         </div>
       </div>

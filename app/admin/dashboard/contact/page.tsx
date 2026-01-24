@@ -8,6 +8,8 @@ interface ContactData {
   phone: string;
   email: string;
   address: string;
+  phoneAvailability: string;
+  openingHours: string;
   instagram: string;
   facebook: string;
   tiktok: string;
@@ -18,6 +20,8 @@ export default function ContactManagementPage() {
     phone: '03334040491',
     email: 'info@bimaahinternationalltd.com',
     address: '10 Toronto Road, Tilbury, RM18 7RL United Kingdom',
+    phoneAvailability: 'Available Mon-Fri',
+    openingHours: 'Mon-Sat: 10:00am - 6:00pm\nSun: 2:00pm - 6:00pm',
     instagram: 'https://www.instagram.com/bimaah2017?igsh=N3pyMmh2Y3J0Mmxx&utm_source=qr',
     facebook: 'https://web.facebook.com/bimaahinternational',
     tiktok: 'https://www.tiktok.com/@bimaahinternational?_r=1&_t=ZN-934cAFesF1i',
@@ -122,6 +126,33 @@ export default function ContactManagementPage() {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1C478A] focus:border-transparent outline-none"
               placeholder="Business address"
             />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Phone Availability
+            </label>
+            <input
+              type="text"
+              value={contactData.phoneAvailability}
+              onChange={(e) => setContactData({ ...contactData, phoneAvailability: e.target.value })}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1C478A] focus:border-transparent outline-none"
+              placeholder="e.g. Available Mon-Fri"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Opening Hours
+            </label>
+            <textarea
+              value={contactData.openingHours}
+              onChange={(e) => setContactData({ ...contactData, openingHours: e.target.value })}
+              rows={3}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1C478A] focus:border-transparent outline-none"
+              placeholder="Mon-Sat: 10:00am - 6:00pm&#10;Sun: 2:00pm - 6:00pm"
+            />
+            <p className="text-xs text-gray-500 mt-1">Use line breaks to separate different days</p>
           </div>
         </div>
 

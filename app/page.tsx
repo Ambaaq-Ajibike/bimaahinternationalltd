@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getContactInfo, getHeroContent } from '@/lib/content';
+import { getContactInfo, getHeroContent, getHomeContent } from '@/lib/content';
 
 export default async function Home() {
-  const [hero, contact] = await Promise.all([getHeroContent(), getContactInfo()]);
+  const [hero, contact, home] = await Promise.all([getHeroContent(), getContactInfo(), getHomeContent()]);
 
   return (
     <div className="bg-white">
@@ -50,9 +50,9 @@ export default async function Home() {
       <section className="bg-navy text-center text-white py-16 px-4">
         <div className="mx-auto">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold">OUR SERVICES</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold">{home.servicesTitle}</h2>
             <p className="text-white/80 mt-4 leading-relaxed max-w-4xl mx-auto">
-              From complex visa applications and immigration appeals to benefits assessments and welfare support, we provide expert legal documentation and advocacy services tailored to your unique circumstances. Our experienced team ensures you understand every stage of the process, empowering you with the clarity and confidence needed to navigate challenging situations with dignity and assurance.
+              {home.servicesDescription}
             </p>
           </div>
         </div>
@@ -62,17 +62,9 @@ export default async function Home() {
       <section className="bg-white text-center text-navy py-16 px-4">
         <div className="mx-auto">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold">CALL US FOR ADVICE</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold">{home.callUsTitle}</h2>
             <p>
-              Call us now on{' '}
-              <Link href={`tel:${contact.phone}`} className="text-[#1A7EB9] font-semibold hover:text-[#1B60A3]">
-                {contact.phone}
-              </Link>
-              {' '}
-              or send us an e-mail at{' '}
-              <Link href={`mailto:${contact.email}`} className="text-[#1A7EB9] font-semibold hover:text-[#1B60A3]">
-                {contact.email}
-              </Link>
+              {home.callUsText}
             </p>
           </div>
         </div>

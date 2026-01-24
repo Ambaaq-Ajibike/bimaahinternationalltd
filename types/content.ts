@@ -4,6 +4,8 @@ export interface ContactInfo {
   phone: string;
   email: string;
   address: string;
+  phoneAvailability?: string;
+  openingHours?: string;
   instagram?: string;
   facebook?: string;
   tiktok?: string;
@@ -65,4 +67,30 @@ export interface CompanyInfo {
   iaaNumber: string;
   tagline: string;
   updatedAt: Date;
+}
+
+export interface PrivacyData {
+  lastUpdated: string;
+  companyRegistration: string;
+  whoWeAre: string;
+  address: string;
+  contactPhone: string;
+  contactEmail: string;
+  whatWeCollectInfo: string;
+  collectingDataInfo: string;
+  whyWeUseDataInfo: string;
+  legalBasisInfo: string;
+  dataStorageInfo: string;
+  dataRetentionInfo: string;
+  sharingDataIntro: string;
+  sharingDataInfo: string;
+  yourRightsInfo: string;
+  cookiesInfo: string;
+  internationalTransfersInfo: string;
+  complaintsInfo: string;
+  complaintsEmail1: string;
+  complaintsEmail2: string;
+  iaaPortalUrl: string;
+  iaaEmail: string;
+  updatesInfo: string;
 }
