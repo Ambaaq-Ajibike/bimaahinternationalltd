@@ -60,7 +60,7 @@ function safeDate(value: unknown) {
 
 export async function getHeroContent(): Promise<HeroContent> {
   try {
-    const snap = await adminDb.collection('content').doc('hero').get();
+    const snap = await adminDb.collection('content').doc('home').get();
     if (!snap.exists) return heroFallback;
     const data = snap.data();
     if (!data) return heroFallback;
