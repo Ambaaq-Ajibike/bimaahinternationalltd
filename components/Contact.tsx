@@ -1,10 +1,18 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { toast } from 'sonner';
 
-export default function Contact() {
+interface ContactInfoProps {
+  contactInfo: {
+    phone: string;
+    email: string;
+    address: string;
+  };
+}
+
+export default function Contact({ contactInfo }: ContactInfoProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -188,7 +196,7 @@ export default function Contact() {
             </div>
             <h3 className="font-semibold text-[#1C478A] mb-2">Call Us</h3>
             <p className="text-[#718A9D]">
-              <a href="tel:+447903263491" className="text-[#1A7EB9] font-semibold">03334040491</a>
+              <a href={`tel:${contactInfo.phone}`} className="text-[#1A7EB9] font-semibold">{contactInfo.phone}</a>
             </p>
             <p className="text-sm text-[#718A9D] mt-2">Available Mon-Fri</p>
           </div>
@@ -198,7 +206,7 @@ export default function Contact() {
             </div>
             <h3 className="font-semibold text-[#1C478A] mb-2">Email Us</h3>
             <p className="text-[#718A9D]">
-              <a href="mailto:info@bimaahinternationalltd.com" className="text-[#1A7EB9] font-semibold block">info@bimaahinternationalltd.com</a>
+              <a href={`mailto:${contactInfo.email}`} className="text-[#1A7EB9] font-semibold block">{contactInfo.email}</a>
             </p>
             <p className="text-sm text-[#718A9D] mt-2">We aim to reply within 24 hours</p>
           </div>
@@ -207,7 +215,7 @@ export default function Contact() {
               <MapPin className="w-10 h-10 text-primary" />
             </div>
             <h3 className="font-semibold text-[#1C478A] mb-2">Visit Us</h3>
-            <p className="text-[#718A9D]">Toronto road, Tilbury RM18 7RL</p>
+            <p className="text-[#718A9D]">{contactInfo.address}</p>
             <p className="text-sm text-[#718A9D] mt-2">By appointment</p>
             <div className="mt-3 text-sm text-[#718A9D]">
               <strong className="text-[#1C478A]">Opening hours:</strong>

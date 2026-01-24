@@ -1,34 +1,14 @@
-import { Globe, Briefcase } from 'lucide-react';
+import type { ComponentType } from 'react';
+import { Briefcase, Globe } from 'lucide-react';
+import { getServices } from '@/lib/content';
 
-export default function Services() {
-  const services = [
-    {
-      id: 'immigration',
-      icon: Globe,
-      title: "Immigration Advice",
-      description: "Expert guidance through complex immigration process with compassion and clarity",
-      items: [
-        "Visa applications and appeals",
-        "EU settlement scheme guidance",
-        "Indefinite leave to remain",
-        "Family and private life visa",
-        "Visitor visa support"
-      ]
-    },
-    {
-      id: 'benefits',
-      icon: Briefcase,
-      title: "Benefits and Welfare Support",
-      description: "Comprehensive support navigating benefits systems with expertise and advocacy",
-      items: [
-        "Universal credit guidance",
-        "PIP and ESA guidance",
-        "Gateway assessments",
-        "Appeals support",
-        "Fair treatment advocacy"
-      ]
-    }
-  ];
+const iconMap: Record<string, ComponentType<{ className?: string }>> = {
+  Globe,
+  Briefcase,
+};
+
+export default async function Services() {
+  const services = await getServices();
 
   return (
     <div className="bg-white">
@@ -51,15 +31,19 @@ export default function Services() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
+            {services.length === 0 && (
+              <div className="md:col-span-2 text-center text-[#718A9D]">
+                Services will appear here once added in the admin dashboard.
+              </div>
+            )}
+            {services.map((service) => {
+              const IconComponent = iconMap[service.title] ?? Globe;
               return (
-                <div 
-                  key={index} 
+                <div
+                  key={service.id}
                   id={service.id}
                   className="flex flex-col h-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition border border-[#97C5D9]"
                 >
-                  {/* Top section - Icon, Title, Description (centered) */}
                   <div className="bg-gradient-to-br from-[#F4F7F8] to-white p-8 flex flex-col items-center text-center flex-grow">
                     <div className="mb-4">
                       <IconComponent className="w-12 h-12 text-[#1A7EB9]" />
@@ -70,19 +54,20 @@ export default function Services() {
                     </p>
                   </div>
 
-                  {/* Bottom section - List (left-aligned) */}
-                  <div className="bg-white p-8 border-t border-[#97C5D9]">
-                    <ul className="space-y-3">
-                      {service.items.map((item, idx) => (
-                        <li key={idx} className="flex items-start">
-                          <svg className="w-5 h-5 text-[#04A3E7] mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                          <span className="text-[#1C478A]">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {service.items && service.items.length > 0 && (
+                    <div className="bg-white p-8 border-t border-[#97C5D9]">
+                      <ul className="space-y-3">
+                        {service.items.map((item, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <svg className="w-5 h-5 text-[#04A3E7] mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                            <span className="text-[#1C478A]">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               );
             })}
