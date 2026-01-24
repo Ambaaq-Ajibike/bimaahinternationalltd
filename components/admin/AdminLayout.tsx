@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { 
   HomeIcon, 
-  DocumentTextIcon, 
   EnvelopeIcon, 
   QuestionMarkCircleIcon,
   ChatBubbleLeftRightIcon,

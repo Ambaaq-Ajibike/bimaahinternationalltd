@@ -23,14 +23,11 @@ export default function Contact({ contactInfo }: ContactInfoProps) {
     message: ''
   });
 
-  const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setError(null);
 
     try {
       const response = await fetch('/api/consultation', {
@@ -53,7 +50,6 @@ export default function Contact({ contactInfo }: ContactInfoProps) {
         duration: 8000,
       });
 
-      setSubmitted(true);
       setFormData({
         name: '',
         email: '',
@@ -61,7 +57,6 @@ export default function Contact({ contactInfo }: ContactInfoProps) {
         service: '',
         message: ''
       });
-      setTimeout(() => setSubmitted(false), 10000);
     } catch (err) {
       console.error('Error submitting form:', err);
       const errorMessage = err instanceof Error ? err.message : 'An error occurred. Please try again.';
@@ -71,8 +66,6 @@ export default function Contact({ contactInfo }: ContactInfoProps) {
         description: errorMessage,
         duration: 6000,
       });
-      
-      setError(errorMessage);
     } finally {
       setIsSubmitting(false);
     }

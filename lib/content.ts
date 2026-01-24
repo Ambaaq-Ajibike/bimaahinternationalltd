@@ -241,6 +241,7 @@ export async function getHomeContent() {
 const privacyFallback: PrivacyData = {
   lastUpdated: '18/01/2026',
   companyRegistration: '16557180',
+  whoWeAre: 'Bimaah International Ltd is registered in England and Wales, company registration number 16557180. Our business address is 10 Toronto Road, Tilbury, RM18 7RL United Kingdom. We provide immigration advisory services, legal drafting, benefits guidance, training, and community support services.',
   address: '10 Toronto Road, Tilbury, RM18 7RL United Kingdom',
   contactPhone: '03334040491',
   contactEmail: 'info@bimaahinternationalltd.com',
@@ -273,6 +274,7 @@ export async function getPrivacyContent(): Promise<PrivacyData> {
     return {
       lastUpdated: data.lastUpdated ?? privacyFallback.lastUpdated,
       companyRegistration: data.companyRegistration ?? privacyFallback.companyRegistration,
+      whoWeAre: data.whoWeAre ?? privacyFallback.whoWeAre,
       address: data.address ?? privacyFallback.address,
       contactPhone: data.contactPhone ?? privacyFallback.contactPhone,
       contactEmail: data.contactEmail ?? privacyFallback.contactEmail,
