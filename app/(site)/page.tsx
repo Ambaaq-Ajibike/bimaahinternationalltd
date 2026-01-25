@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getContactInfo, getHeroContent, getHomeContent } from '@/lib/content';
+import { getHeroContent, getHomeContent } from '@/lib/content';
 
 export default async function Home() {
-  const [hero, contact, home] = await Promise.all([getHeroContent(), getContactInfo(), getHomeContent()]);
+  const [hero, home] = await Promise.all([getHeroContent(), getHomeContent()]);
 
   return (
     <div className="bg-white">
@@ -16,7 +16,7 @@ export default async function Home() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" aria-hidden />
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/70" aria-hidden />
         {/* Hero overlay content */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="px-6 sm:px-10 lg:px-16 max-w-6xl text-center">
@@ -73,14 +73,14 @@ export default async function Home() {
       {/* Tagline + supporting image */}
       <section className="relative w-full h-64 sm:h-80 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
+          src="/assets/about-image.png"
           alt="Professional consultation"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/60" />
         <div className="relative z-10 flex items-center justify-center h-full px-4">
           <p className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
-            {hero.heading}
+            {home.tagline}
           </p>
         </div>
       </section>

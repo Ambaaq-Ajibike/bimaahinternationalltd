@@ -7,6 +7,7 @@ import { toast } from 'sonner';
 
 interface HomeData {
   heading: string;
+  tagline: string;
   subtext: string;
   ctaPrimary: string;
   ctaSecondary: string;
@@ -18,6 +19,7 @@ interface HomeData {
 
 const defaultHomeData: HomeData = {
   heading: 'Trusted Immigration & Advisory Services',
+  tagline: 'Your Rights. Your Voice. Our Support.',
   subtext: 'Expert support for visas, appeals, benefits and legal documentation — clear guidance at every step so you can move forward with confidence.',
   ctaPrimary: 'Book a Consultation',
   ctaSecondary: 'View Services',
@@ -182,7 +184,7 @@ export default function HomeManagementPage() {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1C478A] focus:border-transparent outline-none mb-6"
               placeholder="e.g., CALL US FOR ADVICE"
             />
-
+            
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Section Text
             </label>
@@ -193,6 +195,17 @@ export default function HomeManagementPage() {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1C478A] focus:border-transparent outline-none"
               placeholder="Enter call us section text"
             />
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Tagline
+            </label>
+            <input
+              type="text"
+              value={homeData.tagline}
+              onChange={(e) => setHomeData({ ...homeData, tagline: e.target.value })}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1C478A] focus:border-transparent outline-none mb-6"
+              placeholder="e.g., CALL US FOR ADVICE"
+            />
+
           </div>
         </div>
 

@@ -20,6 +20,7 @@ const heroFallback: HeroContent = {
 
 const homeFallback = {
   heading: 'Trusted Immigration & Advisory Services',
+  tagline: 'Trusted Immigration & Advisory Services',
   subtext: 'Expert support for visas, appeals, benefits and legal documentation — clear guidance at every step so you can move forward with confidence.',
   ctaPrimary: 'Book a Consultation',
   ctaSecondary: 'View Services',
@@ -224,6 +225,7 @@ export async function getHomeContent() {
     
     return {
       heading: data.heading ?? homeFallback.heading,
+      tagline: data.tagline ?? homeFallback.tagline,
       subtext: data.subtext ?? homeFallback.subtext,
       ctaPrimary: data.ctaPrimary ?? homeFallback.ctaPrimary,
       ctaSecondary: data.ctaSecondary ?? homeFallback.ctaSecondary,
