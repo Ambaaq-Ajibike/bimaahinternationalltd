@@ -85,7 +85,6 @@ export async function getContactInfo(): Promise<ContactInfo> {
     if (!snap.exists) return { ...contactFallback, ...socialFallback };
     const data = snap.data();
     if (!data) return { ...contactFallback, ...socialFallback };
-
     return {
       id: 'contact',
       phone: data.phone ?? contactFallback.phone,
