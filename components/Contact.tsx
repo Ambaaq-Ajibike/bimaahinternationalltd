@@ -30,7 +30,7 @@ export default function Contact({ contactInfo }: ContactInfoProps) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/consultation', {
+      const response = await fetch('/api/consultation-mailer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ export default function Contact({ contactInfo }: ContactInfoProps) {
         <h2 className="text-4xl font-bold text-center mb-4 text-[#1C478A]">
           Get In Touch
         </h2>
-        <p className="text-center text-[#718A9D] mb-12 text-lg">
+        <p className="text-center text-grey mb-12 text-lg">
           Book your free consultation today
         </p>
 
