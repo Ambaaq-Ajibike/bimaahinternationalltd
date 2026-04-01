@@ -18,8 +18,8 @@ export async function POST(request: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'ajibikeabdulqayyum04@gmail.com',
-        pass: 'druljhecrmtcuwte',
+        user: 'bimaahltd@gmail.com',
+        pass: 'kmuckjxjocxcixoc',
       },
     });
 
@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
     // Send confirmation email to client
     try {
       await transporter.sendMail({
-        from: '"Bimaah International" <ajibikeabdulqayyum04@gmail.com>',
+        from: '"Bimaah International" <bimaahltd@gmail.com>',
         to: email,
         subject: 'Consultation Request Received - Bimaah International',
         html: clientEmailContent,
@@ -131,8 +131,8 @@ export async function POST(request: NextRequest) {
     // Send notification email to admin
     try {
       await transporter.sendMail({
-        from: '"Bimaah International" <ajibikeabdulqayyum04@gmail.com>',
-        to: 'ajibikeabdulqayyum04@gmail.com',
+        from: '"Bimaah International" <bimaahltd@gmail.com>',
+        to: 'bimaahltd@gmail.com',
         replyTo: email,
         subject: `New Consultation Request from ${name}`,
         html: adminEmailContent,
