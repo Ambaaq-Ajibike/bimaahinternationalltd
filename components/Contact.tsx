@@ -30,7 +30,7 @@ export default function Contact({ contactInfo }: ContactInfoProps) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/consultation-mailer', {
+      const response = await fetch('/api/consultation', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
